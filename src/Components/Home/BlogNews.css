@@ -1,0 +1,8 @@
+.blog-section {
+  width: 85%;
+  margin: 0 auto;
+  /* position: absolute; */
+  /* right: 0; */
+
+  border: 1px solid red;
+}

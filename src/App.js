@@ -1,11 +1,18 @@
+import { createContext, useState } from "react";
 import "./App.css";
 import SideBar from "./Components/Home/SideBar";
 
+export const BlogContext = createContext();
+
 function App() {
+  const [displayView, setDisplayView] = useState();
   return (
-    <section className="blog-page">
+    <BlogContext.Provider
+      value={[displayView, setDisplayView]}
+      className="blog-page"
+    >
       <SideBar></SideBar>
-    </section>
+    </BlogContext.Provider>
   );
 }
 
