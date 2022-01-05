@@ -1,0 +1,15 @@
+.side-bar {
+  width: 22%;
+  height: 100vh;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 2px 2px 8px rgb(187, 187, 187);
+}
+.sidebar-box {
+  width: 80%;
+  margin: 0 auto;
+}
+.users {
+  /* background-color: none;
+  background: white !important; */
+}
