@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Home.css";
 import user from "../../images/user5.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faListUl, faTh } from "@fortawesome/free-solid-svg-icons";
 import FeedbackForm from "./FeedbackForm";
 import BlogNews from "./BlogNews";
+import { BlogContext } from "../../App";
 
 const SideBar = () => {
   const [feedback, setFeedback] = useState(false);
 
   const showFeedbackForm = () => setFeedback(!feedback);
+
+  const [displayView, setDisplayView] = useContext(BlogContext);
 
   return (
     <section className={feedback ? "side-bar d-flex" : " d-flex "}>
@@ -38,10 +41,24 @@ const SideBar = () => {
           >
             <h5 className=" pt-1">View Toggle</h5>
             <div className="m-4 toggle-bg  d-flex  ">
-              <div className="w-50 py-3 toggle-green">
+              <div
+                onClick={() => setDisplayView("grid-view")}
+                className={
+                  displayView === "grid-view"
+                    ? "toggle-green w-50 py-3"
+                    : " w-50 py-3 "
+                }
+              >
                 <FontAwesomeIcon icon={faTh} size="lg" />
               </div>
-              <div className="w-50 py-3">
+              <div
+                onClick={() => setDisplayView("list-view")}
+                className={
+                  displayView === "list-view"
+                    ? "toggle-green w-50 py-3"
+                    : " w-50 py-3 "
+                }
+              >
                 <FontAwesomeIcon icon={faListUl} size="lg" />
               </div>
             </div>
