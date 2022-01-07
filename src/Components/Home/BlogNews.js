@@ -48,9 +48,12 @@ const BlogNews = ({ handleDlt, blogData, handleViewModal }) => {
       {displayView === "list-view" ? (
         <div className="blog-news-list ">
           {currentItem.map((data) => (
-            <div className="mx-auto" onClick={() => handleViewModal(data.id)}>
+            <div className="mx-auto">
               <div className="row mb-3 ">
-                <div className="col-11  p-3 blog-list-data shadow">
+                <div
+                  className="col-11  p-3 blog-list-data shadow"
+                  onClick={() => handleViewModal(data.id)}
+                >
                   <div className="row ">
                     <div className="col-2 m-auto text-center ">
                       {" "}
@@ -78,23 +81,22 @@ const BlogNews = ({ handleDlt, blogData, handleViewModal }) => {
       ) : (
         <div className="blog-news-grid">
           {currentItem.map((data) => (
-            <div
-              className="grid-data p-2"
-              onClick={() => handleViewModal(data.id)}
-            >
+            <div className="grid-data p-2">
               <div
                 className="text-danger cls-btn"
                 onClick={() => handleDlt(data.id)}
               >
                 <FontAwesomeIcon icon={faTimes} size="lg" className="" />
               </div>
-              <div className="grid-desc">
-                <h5>{data.title.slice(0, 22) + ".."}</h5>
-                <p>{data.body.slice(0, 35) + ".."}</p>
-                <small>Monday, 21 dec 2021 14:40 GMT</small>
-              </div>
-              <div className="pt-2">
-                <img src={img2} className="img-fluid " alt="" />
+              <div className="div" onClick={() => handleViewModal(data.id)}>
+                <div className="grid-desc">
+                  <h5>{data.title.slice(0, 22) + ".."}</h5>
+                  <p>{data.body.slice(0, 35) + ".."}</p>
+                  <small>Monday, 21 dec 2021 14:40 GMT</small>
+                </div>
+                <div className="pt-2">
+                  <img src={img2} className="img-fluid " alt="" />
+                </div>
               </div>
             </div>
           ))}

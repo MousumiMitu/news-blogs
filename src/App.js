@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
-      .then((data) => setBlogData(data.slice(0, 40)));
+      .then((data) => setBlogData(data.slice(0, 45)));
   }, []);
 
   const handleDlt = (id) => {
