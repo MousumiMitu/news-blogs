@@ -15,8 +15,8 @@ const SideBar = () => {
   const [displayView, setDisplayView] = useContext(BlogContext);
 
   return (
-    <section className={feedback ? "side-bar d-flex" : " d-flex "}>
-      <div className="d-flex">
+    <section className={feedback ? "side-bar " : "  "}>
+      <div className="">
         <div
           className={
             feedback
@@ -86,9 +86,6 @@ const SideBar = () => {
         >
           <FeedbackForm />
         </div>
-      </div>
-      <div className="pt-4">
-        <BlogNews />
       </div>
     </section>
   );

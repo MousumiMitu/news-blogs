@@ -5,3 +5,35 @@
 .blog-page {
   background-color: #ebf2f7;
 }
+p {
+  margin-bottom: 0;
+}
+small {
+  color: rgb(158, 155, 155);
+}
+.cardModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(209, 208, 208, 0.726);
+  z-index: 110;
+}
+.modal-desc {
+  padding: 50px 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  /* box-shadow: 0 0 10px rgb(189, 187, 187); */
+  width: 70%;
+  margin: 30px auto;
+  position: relative;
+}
+.modal-desc button {
+  background-color: #97eec8;
+  padding: 10px 20px;
+}

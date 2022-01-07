@@ -1,8 +1,8 @@
 .blog-section {
-  width: 85%;
-  margin: 0 auto;
+  margin-left: 280px;
   /* position: absolute; */
   /* right: 0; */
+  padding: 0 20px;
   transition: 0.5s ease;
 }
 .blog-news-list {
@@ -23,6 +23,42 @@
   background: #fff;
   border-radius: 15px;
 }
+.grid-desc h5 {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.grid-desc p {
+  font-size: 0.98rem;
+  color: rgb(158, 155, 155);
+}
 .cls-btn {
   text-align: right;
+  cursor: pointer;
+}
+.close-btn {
+  cursor: pointer;
+}
+
+.itemPagination {
+  display: flex;
+  justify-content: center;
+}
+ul {
+  text-align: center;
+  list-style: none;
+  display: flex;
+}
+li {
+  padding: 2px 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+.activePage {
+  background-color: rgb(168, 168, 168);
 }

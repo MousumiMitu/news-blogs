@@ -2,7 +2,7 @@ import React from "react";
 
 const FeedbackForm = () => {
   return (
-    <section className="pt-4 px-3">
+    <section className="pt-4 px-3 form-page">
       <h4 className="p-0"> Thank you so much for taking time</h4>
       <small>Please provide the below details</small>
       <form action="" className="d-flex flex-column form-details pt-3">
