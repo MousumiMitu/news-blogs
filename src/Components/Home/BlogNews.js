@@ -9,45 +9,45 @@ import { BlogContext } from "../../App";
 const BlogNews = ({ handleDlt, blogData, handleViewModal }) => {
   const [displayView, setDisplayView] = useContext(BlogContext);
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemPerPage] = useState(9);
+  const [latestPage, setLatestPage] = useState(1);
+  const [PerPageData] = useState(9);
 
-  const pages = [];
-  for (let i = 1; i <= Math.ceil(blogData.length / itemPerPage); i++) {
-    pages.push(i);
+  const blogPages = [];
+  for (let i = 1; i <= Math.ceil(blogData.length / PerPageData); i++) {
+    blogPages.push(i);
   }
   const handlePagination = (e) => {
-    setCurrentPage(Number(e.target.id));
+    setLatestPage(Number(e.target.id));
   };
-  const pageNumber = pages.map((number) => {
+  const pageNumber = blogPages.map((number) => {
     return (
       <li
         key={number}
         id={number}
         onClick={handlePagination}
-        className={currentPage === number ? "activePage" : null}
+        className={latestPage === number ? "active-page" : null}
       >
         {number}
       </li>
     );
   });
 
-  const indexOfLastItem = currentPage * itemPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemPerPage;
-  const currentItem = blogData.slice(indexOfFirstItem, indexOfLastItem);
+  const lastDataIndex = latestPage * PerPageData;
+  const firstDataIndex = lastDataIndex - PerPageData;
+  const currentData = blogData.slice(firstDataIndex, lastDataIndex);
 
   const handlePrev = () => {
-    setCurrentPage(currentPage - 1);
+    setLatestPage(latestPage - 1);
   };
   const handleNext = () => {
-    setCurrentPage(currentPage + 1);
+    setLatestPage(latestPage + 1);
   };
 
   return (
     <section className="blog-section pt-4">
       {displayView === "list-view" ? (
         <div className="blog-news-list ">
-          {currentItem.map((data) => (
+          {currentData.map((data) => (
             <div className="mx-auto">
               <div className="row mb-3 ">
                 <div
@@ -80,7 +80,7 @@ const BlogNews = ({ handleDlt, blogData, handleViewModal }) => {
         </div>
       ) : (
         <div className="blog-news-grid">
-          {currentItem.map((data) => (
+          {currentData.map((data) => (
             <div className="grid-data p-2">
               <div
                 className="text-danger cls-btn"
@@ -108,7 +108,7 @@ const BlogNews = ({ handleDlt, blogData, handleViewModal }) => {
           <li>
             <button
               onClick={handlePrev}
-              disabled={currentPage === pages[0] ? true : false}
+              disabled={latestPage === blogPages[0] ? true : false}
             >
               Prev
             </button>
@@ -117,7 +117,7 @@ const BlogNews = ({ handleDlt, blogData, handleViewModal }) => {
           <li>
             <button
               onClick={handleNext}
-              disabled={currentPage === pages.length ? true : false}
+              disabled={latestPage === blogPages.length ? true : false}
             >
               Next
             </button>

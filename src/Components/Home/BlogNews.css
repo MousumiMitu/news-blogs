@@ -60,6 +60,6 @@ button {
   border: none;
   background-color: transparent;
 }
-.activePage {
+.active-page {
   background-color: rgb(168, 168, 168);
 }
