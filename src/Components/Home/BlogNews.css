@@ -6,6 +6,7 @@
 }
 .blog-news-list {
   transition: 0.5s ease;
+  cursor: pointer;
 }
 .blog-list-data {
   background-color: #fff;
@@ -16,6 +17,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  cursor: pointer;
   transition: 0.5s ease;
 }
 .grid-data {

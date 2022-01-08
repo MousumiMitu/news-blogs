@@ -10,7 +10,8 @@ import { BlogContext } from "../../App";
 const SideBar = () => {
   const [feedback, setFeedback] = useState(false);
 
-  const showFeedbackForm = () => setFeedback(!feedback);
+  const showFeedbackForm = () => setFeedback(true);
+  const closeFeedbackForm = () => setFeedback(false);
 
   const [displayView, setDisplayView] = useContext(BlogContext);
 
@@ -84,7 +85,7 @@ const SideBar = () => {
               : "extended-sidebar "
           }
         >
-          <FeedbackForm />
+          <FeedbackForm closeFeedbackForm={closeFeedbackForm} />
         </div>
       </div>
     </section>

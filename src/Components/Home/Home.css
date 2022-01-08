@@ -1,7 +1,6 @@
 .side-bar {
   background: rgba(155, 153, 153, 0.815);
   z-index: 98;
-  /* width: 100%; */
   background-color: rgba(0, 0, 0, 0.575);
   position: relative;
 }
@@ -13,9 +12,6 @@
   padding: 0 20px;
   background: #ebf2f7;
   z-index: 100;
-
-  /* border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px; */
 }
 .active-sidebar-box {
   border-top-right-radius: 15px;
@@ -67,7 +63,7 @@
 .form-page {
   background: #ebf2f7;
   width: 470px;
-  height: 100vh;
+  height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 2px 2px 8px rgb(187, 187, 187);
@@ -93,4 +89,10 @@
   border-radius: 10px;
   color: rgb(248, 245, 245);
   font-weight: bold;
+}
+.cls-btn3 {
+  text-align: end;
+  padding: 0 10px;
+  color: #eca4a7;
+  cursor: pointer;
 }

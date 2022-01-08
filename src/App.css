@@ -12,7 +12,7 @@ p {
 small {
   color: rgb(158, 155, 155);
 }
-.cardModal {
+.open-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -34,7 +34,10 @@ small {
   margin: 30px auto;
   position: relative;
 }
-.modal-desc button {
+.open-modal button {
+  position: absolute;
   background-color: #97eec8;
   padding: 10px 20px;
+  top: 0;
+  right: 0;
 }
